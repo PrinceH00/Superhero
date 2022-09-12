@@ -23,16 +23,6 @@ public class Superhero {
     }
 
 
-    Superhero (String name, int age, String race, String superPower, double strength, int creationYear)
-    {
-        this.name = name;
-        this.age = age;
-        this.race = race;
-        this.superPower = superPower;
-        this.strength = strength;
-        this.creationYear = creationYear;
-    }
-
 // Tilføjer GetMetoder
     public String getName() {
         return name;
@@ -65,5 +55,17 @@ public class Superhero {
     // Tilføjer SetMetoder
     public void setStrength(double strength) {
         this.strength = strength;
+    }
+
+    public String toString() {
+        return "\nSuperhero { " +
+                "name = '" + name +'\'' +
+                ", heroName = '" + heroName + '\'' +
+                ", age = " + age +
+                ", race = '" + race + '\'' +
+                ", superPower = '" + superPower + '\'' +
+                ", strength = " + strength +
+                ", creationYear = " + creationYear +
+                '}';
     }
 }

@@ -1,5 +1,10 @@
+import java.util.Scanner;
+
 public class Database {
 
     // Opretter Array
-    Superhero[] superheroes;
+    private Superhero[] superheroes = new Superhero[5];
+
+
+
 }
