@@ -1,9 +1,11 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Database {
 
-    // Opretter Array
-    private Superhero[] superheroes = new Superhero[5];
+    // Opretter Arrayliste
+    private ArrayList<String> superheroes = new ArrayList<>();
+    //private Superhero[] superheroes = new Superhero[5];
 
     private int nummberOfSuperheros = 0;
     public void addHero(String name, String heroName, int age, String race, String superPower,  double strength, int creationYear){
