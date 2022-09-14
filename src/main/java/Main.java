@@ -2,39 +2,55 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
         //Opretter et objet, af klassen Superhero.
-        Superhero superhero = new Superhero("Bruce ","Batmand",32," Human"," Money",45.4,1992);
+        Database database = new  Database();
+
 
         //Printer velkomsttekst.
         //Scanner modtager brugerinput.
-        System.out.println("\nVelkommen til superhelte universet"+ " \nIndtast dine oplysninger hælt");
-        System.out.println("\n Indtast venligst dit Navn");
-
-        Scanner scanner = new Scanner(System.in);
-        String name = scanner.nextLine();
-
-        System.out.println("\nIndtast dit superhelte navn");
-        String heroName= scanner.nextLine();
-
-        System.out.println("\nIndtast din alder");
-        int age= scanner.nextInt();
-
-        System.out.println("\nIndtast dit race");
-        String race= scanner.nextLine();
-
-        System.out.println("\nIndtast din superkræft");
-        String superPower= scanner.nextLine();
-
-        System.out.println("\nIndtast din styrke");
-        double strength= scanner.nextDouble();
-
-        System.out.println("\nIndtast dit oprettelses år");
-        int creationYear= scanner.nextInt();
+        System.out.println("\nVelkommen til superhelte universet");
 
 
+        while (true) {
+            System.out.println(""" 
+                1. Opret superhelt  
+                2. Se liste af Heros
+                9. Afslut""");
 
+            int userchoise = scanner.nextInt();
 
+            if (userchoise == 1) {
 
+                System.out.println("\nIndtast venligst dit Navn");
+                String name = scanner.next();
+
+                System.out.println("Indtast dit superhelte navn");
+                String heroName = scanner.next();
+
+                System.out.println("Indtast din alder");
+                int age = scanner.nextInt();
+
+                System.out.println("Indtast dit race");
+                String race = scanner.next();
+
+                System.out.println("Indtast din superkræft");
+                String superPower = scanner.next();
+
+                System.out.println("Indtast din styrke");
+                double strength = scanner.nextDouble();
+
+                System.out.println("Indtast dit oprettelses år \n");
+                int creationYear = scanner.nextInt();
+
+                database.addHero(name, heroName, age, race, superPower, strength, creationYear);
+
+                database.printSuperheroes();
+            }else {
+                break;
+            }
+        }
     }
     }
 
