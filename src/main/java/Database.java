@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Database {
 
@@ -18,6 +19,11 @@ public class Database {
         for (Superhero s :superheroes) {
             System.out.println(s);
         }
+    }
 
+    public void  searchSuperhero ()
+    {
+        System.out.println(" Søg efter din hero. Intast navnet ");
+        Scanner ss = new Scanner(System.in);
     }
 }

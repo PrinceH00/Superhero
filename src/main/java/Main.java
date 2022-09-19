@@ -7,16 +7,15 @@ public class Main {
         //Opretter et objet, af klassen Superhero.
         Database database = new  Database();
 
-
         //Printer velkomsttekst.
-        //Scanner modtager brugerinput.
         System.out.println("\nVelkommen til superhelte universet");
 
 
         while (true) {
             System.out.println(""" 
                 1. Opret superhelt  
-                2. Se liste af Heros
+                2. Hero List
+                3. Search for Heroes 
                 9. Afslut""");
 
             int userchoise = scanner.nextInt();
@@ -50,7 +49,9 @@ public class Main {
 
             }else if (userchoise == 2) {
                 database.printSuperheroes();
-            }else{
+            }else if (userchoise == 3){
+                database.searchSuperhero();
+            } else{
                 break;
             }
 
