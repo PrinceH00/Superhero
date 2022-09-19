@@ -58,14 +58,12 @@ public class Superhero {
     }
 
     public String toString() {
-        return "\nSuperhero { " +
-                "name = '" + name +'\'' +
-                ", heroName = '" + heroName + '\'' +
-                ", age = " + age +
-                ", race = '" + race + '\'' +
-                ", superPower = '" + superPower + '\'' +
-                ", strength = " + strength +
-                ", creationYear = " + creationYear +
-                '}';
+        return  "\nname = " + name +
+                "\nheroName = " + heroName +
+                "\nage = " + age +
+                "\nrace = " + race +
+                "\nsuperPower = '" + superPower +
+                "\nstrength = " + strength +
+                "\ncreationYear = " + creationYear + "\n";
     }
 }

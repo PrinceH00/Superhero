@@ -40,17 +40,26 @@ public class Main {
 
                 System.out.println("Indtast din styrke");
                 double strength = scanner.nextDouble();
+                scanner.nextLine();
 
                 System.out.println("Indtast dit oprettelses år \n");
                 int creationYear = scanner.nextInt();
 
                 database.addHero(name, heroName, age, race, superPower, strength, creationYear);
 
+
+            }else if (userchoise == 2) {
                 database.printSuperheroes();
-            }else {
+            }else{
                 break;
             }
+
         }
     }
     }
 
+/* while (!scanner.hasNextInt()) {
+                    String text = scanner.next();
+                    System.out.println("Du må ikke indtaste " + text + " det skal være et tal");
+                    }
+                */
