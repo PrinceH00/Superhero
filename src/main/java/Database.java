@@ -1,20 +1,17 @@
 import java.util.ArrayList;
-import java.util.Scanner;
 
 public class Database {
 
     // Opretter Arrayliste
-    private ArrayList<String> superheroes = new ArrayList<>();
-    //private Superhero[] superheroes = new Superhero[5];
+    private ArrayList <Superhero> superheroes = new ArrayList<>();
 
     private int nummberOfSuperheros = 0;
     public void addHero(String name, String heroName, int age, String race, String superPower,  double strength, int creationYear){
-        Superhero hero = new Superhero(name,heroName,age,race,superPower,strength,creationYear);
-        superheroes[nummberOfSuperheros++] = hero;
+        superheroes.add(new Superhero(name,heroName,age,race,superPower,strength,creationYear));
     }
 
-    public Superhero getSuperhero(int index) {
-        return superheroes[index];
+    public int getSuperhero(int i) {
+        return superheroes.indexOf(i);
     }
 
     public void printSuperheroes() {
