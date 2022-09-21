@@ -20,7 +20,7 @@ public class UserInterface {
                     2. Display all superheroes.
                     3. Search superhero.
                     4. Edit superhero.
-                    5. Delete Superhero.
+                    5. Remove Superhero.
                     9. End program.
                     """);
 
@@ -44,7 +44,7 @@ public class UserInterface {
             editSuperhero();
 
         } else if (userChoice == 5) {
-            deleteSuperhero();
+            removeSuperhero();
 
         } else if (userChoice == 9) {
             System.exit(0);
@@ -155,10 +155,8 @@ public class UserInterface {
                 editSuperhero.setStrengh(Double.parseDouble(newStrengh));
             }
 
-            System.out.println("Edit stored:");
-            System.out.println();
-            System.out.println(editSuperhero);
-            System.out.println();
+            System.out.println("Edit stored:\n");
+            System.out.println(editSuperhero + "\n");
 
         } else {
             System.out.println("No superhero found with the name: " + searchName + "\n");
@@ -169,7 +167,7 @@ public class UserInterface {
         while(!sc.hasNextInt()) {
             String text = sc.nextLine();
             System.out.println();
-            System.out.println(text + " is not a whole number. Please try again.");
+            System.out.println(text + " is not a whole number. Please try again.\n");
             System.out.println();
         }
         int temp = sc.nextInt();
@@ -181,8 +179,7 @@ public class UserInterface {
         while(!sc.hasNextDouble()) {
             String text = sc.nextLine();
             System.out.println();
-            System.out.println(text + " is not a decimal number. Please try again.");
-            System.out.println();
+            System.out.println(text + " is not a decimal number. Please try again.\n");
         }
         double temp = sc.nextDouble();
         sc.nextLine();
@@ -202,10 +199,10 @@ public class UserInterface {
         }
     }
 
-    public void deleteSuperhero(){
+    public void removeSuperhero(){
         System.out.println("Enter the name of the superhero u would like to delete");
         String name = sc.nextLine();
-        db.removeSuperhero(name);
+        db.deleteSuperhero(name);
     }
 
 }
