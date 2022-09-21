@@ -16,7 +16,6 @@ public class Database {
         return superheroes;
     }
 
-
     public ArrayList<Superhero> searchSuperheroes(String name) {
         ArrayList<Superhero> searchResult = new ArrayList<>();
         for (Superhero i : superheroes) {
@@ -26,7 +25,7 @@ public class Database {
         }
         return searchResult;
     }
-    public void deleteSuperhero(String superheroName) {
+    public void removeSuperhero(String superheroName) {
         int foundIndex = - 1;
         for (int i = 0; i < superheroes.size(); i++) {
             if (superheroes.get(i).getSuperheroName().equals(superheroName)) {

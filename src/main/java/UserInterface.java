@@ -20,6 +20,7 @@ public class UserInterface {
                     2. Display all superheroes.
                     3. Search superhero.
                     4. Edit superhero.
+                    5. Delete Superhero.
                     9. End program.
                     """);
 
@@ -41,6 +42,10 @@ public class UserInterface {
 
         } else if (userChoice == 4) {
             editSuperhero();
+
+        } else if (userChoice == 5) {
+            deleteSuperhero();
+
         } else if (userChoice == 9) {
             System.exit(0);
         } else {
@@ -197,5 +202,10 @@ public class UserInterface {
         }
     }
 
+    public void deleteSuperhero(){
+        System.out.println("Enter the name of the superhero u would like to delete");
+        String name = sc.nextLine();
+        db.removeSuperhero(name);
+    }
 
 }
