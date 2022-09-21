@@ -1,69 +1,97 @@
 public class Superhero {
-
-    //Atrbutter til superhelte
-    private String name;
-    private String heroName;
-    private int age;
-    private String race;
+    private String superheroName;
+    private String civilianName;
     private String superPower;
-    private double strength;
+    private boolean isHuman;
     private int creationYear;
+    private double strengh;
 
-
-    //Opretter og overlorader konstruktør
-    Superhero (String name, String heroName, int age, String race, String superPower,  double strength, int creationYear)
-    {
-        this.name = name;
-        this.heroName = heroName;
-        this.age = age;
-        this.race = race;
+    public Superhero(String superheroName, String civilianName, String superPower, boolean isHuman, int creationYear, double strengh) {
+        this.superheroName = superheroName;
+        this.civilianName = civilianName;
         this.superPower = superPower;
-        this.strength = strength;
+        this.isHuman = isHuman;
         this.creationYear = creationYear;
+        this.strengh = strengh;
+
     }
 
-
-// Tilføjer GetMetoder
-    public String getName() {
-        return name;
+    public Superhero(Superhero source) {
+        this.superheroName = source.superheroName;
+        this.civilianName = source.civilianName;
+        this.superPower = source.superPower;
+        this.isHuman = source.isHuman;
+        this.creationYear = source.creationYear;
+        this.strengh = source.strengh;
     }
 
-    public String getHeroName() {
-        return heroName;
+    //Gettere
+    public String getSuperheroName() {
+        return superheroName;
     }
 
-    public int getAge() {
-        return age;
-    }
-
-    public String getRace() {
-        return race;
+    public String getCivilianName() {
+        return civilianName;
     }
 
     public String getSuperPower() {
         return superPower;
     }
 
-    public double getStrength() {
-        return strength;
+    public boolean getIsHuman() {
+        return isHuman;
     }
 
     public int getCreationYear() {
         return creationYear;
     }
 
-    // Tilføjer SetMetoder
-    public void setStrength(double strength) {
-        this.strength = strength;
+    public double getStrengh() {
+        return strengh;
     }
 
+    //Settere
+
+    public void setSuperheroName(String superheroName) {
+        this.superheroName = superheroName;
+    }
+
+    public void setCivilianName(String civilianName) {
+        this.civilianName = civilianName;
+    }
+
+    public void setSuperPower(String superPower) {
+        this.superPower = superPower;
+    }
+
+    public void setIsHuman(boolean isHuman) {
+        this.isHuman = isHuman;
+    }
+
+    public void setCreationYear(int creationYear) {
+        this.creationYear = creationYear;
+    }
+
+    public void setStrengh(double strenght) {
+        this.strengh = strenght;
+    }
+
+    public String printIsHuman() {
+        if (getIsHuman() == true) {
+            return "Yes";
+        } else {
+            return "No";
+        }
+    }
+    // ToString
     public String toString() {
-        return  "\nname = " + name +
-                "\nheroName = " + heroName +
-                "\nage = " + age +
-                "\nrace = " + race +
-                "\nsuperPower = '" + superPower +
-                "\nstrength = " + strength +
-                "\ncreationYear = " + creationYear + "\n";
+        String temp = "";
+        temp += "Superhero name: " + superheroName + '\n';
+        temp += "Civilian name: " + civilianName + '\n';
+        temp += "Superpower: " + superPower + '\n';
+        temp += "Is human: " + printIsHuman() + '\n';
+        temp += "Creation Year: " + creationYear + '\n';
+        temp += "Strengh: " + strengh;
+        return temp;
     }
 }
